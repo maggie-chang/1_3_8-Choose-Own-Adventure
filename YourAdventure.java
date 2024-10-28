@@ -24,24 +24,25 @@ public class YourAdventure
             String firstChoiceInput1OptionA = "\nYou immediately bolted, running away from the sound.";
             System.out.println(firstChoiceInput1OptionA);
             sanity -= 5;
-            sanity -= 50;
+            stamina -= 35;
             System.out.println(" \nSanity: " + sanity + "%");
             System.out.println("Stamina: " + stamina);
             
-            String secondText = "";
-            String secondChoice = "silly 1, 2, 3";
+            String secondText = "You start to feel your energy depleting, but the sound seems to still be pursing you.";
+            String secondChoice = "\n (1) Continue running. \n (2) Stop and catch your breath.";
+            System.out.println(secondText);
             System.out.println(secondChoice);
             String secondChoiceInput2 = scanner.nextLine();
                 if (secondChoiceInput2.equals("1")) {
-                    System.out.println("test1");
+                    sanity -= 10;
+                    stamina -= 35;
+                    System.out.println(" \nSanity: " + sanity + "%");
+                    System.out.println("Stamina: " + stamina);
+                    System.out.println("you suck");
                     break;
                 }
                 else if (secondChoiceInput2.equals("2")) {
-                    System.out.println("test2");
-                    break;
-                }
-                else if (secondChoiceInput2.equals("3")) {
-                    System.out.println("test3");
+                    System.out.println("you died");
                     break;
                 }
         }
