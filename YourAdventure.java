@@ -16,6 +16,7 @@ public class YourAdventure
         
     String firstChoice = "\n (1) Run in the opposite direction of the sound. \n (2) Approach the sound. \n (3) Hide. ";
     System.out.println(firstChoice);
+    System.out.println("Your choice: ");
     String firstChoiceInput1 = scanner.nextLine();
 
     while (sanity != 0 && stamina != 0) {
@@ -32,6 +33,7 @@ public class YourAdventure
             String secondChoice = "\n (1) Continue running. \n (2) Stop and catch your breath.";
             System.out.println(secondText);
             System.out.println(secondChoice);
+            System.out.println("Your choice: ");
             String secondChoiceInput2 = scanner.nextLine();
                 if (secondChoiceInput2.equals("1")) {
                     String secondChoiceInput2OptionA = "\nYou continue running, making rapid turns in hopes to lose the stalker, to no avail.";
@@ -41,7 +43,26 @@ public class YourAdventure
                     System.out.println(" \nSanity: " + sanity + "%");
                     System.out.println("Stamina: " + stamina);
                     String thirdChoice = "\n (1) Continue running. \n (2) Stop and catch your breath.";
+                    System.out.println(thirdChoice);
+                    System.out.println("Your choice: ");
                     String thirdChoiceInput3 = scanner.nextLine();
+                    if (thirdChoiceInput3.equals("1")) {
+                        String thirdChoiceInput3OptionA = "You pushed yourself too far and ran out of stamina. You collapse on the floor, never to be awoken again.";
+                        System.out.println(thirdChoiceInput3OptionA);
+                        sanity -= 20;
+                        stamina -= 30;
+                        System.out.println(" \nSanity: " + sanity + "%");
+                        System.out.println("Stamina: " + stamina);
+                        System.out.println("Bad Ending (#3)");
+                    }
+                    else if (thirdChoiceInput3.equals("2")) {
+                        String thirdChoiceInput3OptionB = "You stop by a classroom, and decide to hide in there for a bit.";
+                        System.out.println(thirdChoiceInput3OptionB);
+                        sanity -= 10;
+                        stamina += 40;
+                        System.out.println(" \nSanity: " + sanity + "%");
+                        System.out.println("Stamina: " + stamina);
+                    }
                 break;
                 }
                 else if (secondChoiceInput2.equals("2")) {
