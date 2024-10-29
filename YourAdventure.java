@@ -8,12 +8,12 @@ public class YourAdventure
     int sanity = 100;
     int stamina = 100;
 
-    String openingText = "\nYou cautiously meander through the ominous abandoned school while trying to find your cat companion. You can hear your rhythmic footsteps and the soft droplets falling from the overgrown vegetation. It was mostly quiet, but there was also something else--a distant tapping noise that seems to be nearing you.  \n";
+    String openingText = "\nYou cautiously meander through the ominous abandoned school while trying to find your cat companion. You can hear your rhythmic footsteps and the soft droplets falling from the overgrown vegetation. It was mostly quiet, but there was also something else--a distant tapping noise that seems to be nearing you. \n";
     
     System.out.println("Sanity: " + sanity + "%");
         System.out.println("Stamina: " + stamina);
         
-        String firstChoice = "\n (1) Run the opposite direction of the sound. \n (2) Approach the sound. \n (3) Hide. ";
+        String firstChoice = "\n (1) Run in the opposite direction of the sound. \n (2) Approach the sound. \n (3) Hide. ";
           
         System.out.println(openingText + firstChoice);
         String firstChoiceInput1 = scanner.nextLine();
@@ -28,37 +28,51 @@ public class YourAdventure
             System.out.println(" \nSanity: " + sanity + "%");
             System.out.println("Stamina: " + stamina);
             
-            String secondText = "You start to feel your energy depleting, but the sound seems to still be pursing you.";
+            String secondText = "\nYou start to feel your energy depleting, but the tapping sound still seems to be pursing you.";
             String secondChoice = "\n (1) Continue running. \n (2) Stop and catch your breath.";
             System.out.println(secondText);
             System.out.println(secondChoice);
             String secondChoiceInput2 = scanner.nextLine();
                 if (secondChoiceInput2.equals("1")) {
-                    sanity -= 10;
+                    sanity -= 20;
                     stamina -= 35;
                     System.out.println(" \nSanity: " + sanity + "%");
                     System.out.println("Stamina: " + stamina);
-                    System.out.println("you suck");
-                    break;
+                    String secondChoiceInput2OptionA = "\nYou continue running, making rapid turns in hopes to lose the stalker, to no avail.";
+                    System.out.println(secondChoiceInput2OptionA);
+                    String thirdChoice = "\n (1) Continue running. \n (2) Stop and catch your breath.";
+                    String thirdChoiceInput3 = scanner.nextLine();
+                break;
                 }
                 else if (secondChoiceInput2.equals("2")) {
-                    System.out.println("you died");
+                    sanity -= 95;
+                    stamina += 15;
+                    System.out.println(" \nSanity: " + sanity + "%");
+                    System.out.println("Stamina: " + stamina);
+                    String secondChoiceInput2OptionB = "\nYou stop to catch your breath, but the sound caught up to you. Before you could start running again, it had already enveloped you.";
+                    System.out.println(secondChoiceInput2OptionB);
+                    System.out.println("Bad Ending (#2)");
                     break;
                 }
         }
         else if (firstChoiceInput1.equals("2")) {
             sanity -= 0;
             stamina -= 5;
-            String firstChoiceInput1OptionB = "\nAs you approach the sound, you see a small, four-legged furry figure. It was your cat! You picked him up and strolled out of the school safely, feeling very satisfied.";
-            System.out.println(firstChoiceInput1OptionB);
             System.out.println(" \nSanity: " + sanity + "%");
             System.out.println("Stamina: " + stamina);
             System.out.println("Good Ending (#1)");
+            String firstChoiceInput1OptionB = "\nAs you approach the sound, you see a small, four-legged furry figure. It was your cat! You picked him up and strolled out of the school safely, feeling very satisfied.";
+            System.out.println(firstChoiceInput1OptionB);
         break;
         }
         else if (firstChoiceInput1.equals("3")) {
-            String firstChoiceInput1OptionC = "\n There are no good hiding spots. Classrooms were all wide open and in shambles. You turned into a narrow hallway and found a locker still intact. You cringed at the loud creaking, knowing whoever is following definately heard it. The tapping was growing louder, and you didn't have any other options.";
+            sanity -= 25;
+            stamina -= 10;
+            String firstChoiceInput1OptionC = "\n There are no good hiding spots. Classrooms were all wide open and in shambles. You quickly turned into a narrow hallway and found a locker still intact. You cringed at the loud creaking, knowing whatever is following definately heard it. The tapping was growing louder, and you didn't have any other options.";
             System.out.println(firstChoiceInput1OptionC);
+            System.out.println(" \nSanity: " + sanity + "%");
+            System.out.println("Stamina: " + stamina);
+        break;
             
         }
         else {
