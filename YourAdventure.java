@@ -66,30 +66,30 @@ public class YourAdventure
                 break;
                 }
                 else if (secondChoiceInput2.equals("2")) {
-                    String secondChoiceInput2OptionB = "\nYou stop to catch your breath, but the sound caught up to you. Before you could start running again, it had already enveloped you.";
+                    String secondChoiceInput2OptionB = "\nYou stop momentarily to catch your breath, but the sound caught up to you. Before you could escape, it had already enveloped you.";
                     System.out.println(secondChoiceInput2OptionB);
                     sanity -= 95;
-                    stamina += 15;
+                    stamina += 10;
                     System.out.println(" \nSanity: " + sanity + "%");
                     System.out.println("Stamina: " + stamina);
                     System.out.println("\nBad Ending (#2)");
                 }
         }
         else if (firstChoiceInput1.equals("2")) {
+            String firstChoiceInput1OptionB = "\nAs you approach the sound, you see a small, four-legged furry figure. It was your cat! You picked him up and strolled out of the school safely, feeling very satisfied.";
+            System.out.println(firstChoiceInput1OptionB);
             sanity -= 0;
             stamina -= 5;
             System.out.println(" \nSanity: " + sanity + "%");
             System.out.println("Stamina: " + stamina);
             System.out.println("Good Ending (#1)");
-            String firstChoiceInput1OptionB = "\nAs you approach the sound, you see a small, four-legged furry figure. It was your cat! You picked him up and strolled out of the school safely, feeling very satisfied.";
-            System.out.println(firstChoiceInput1OptionB);
         break;
         }
         else if (firstChoiceInput1.equals("3")) {
-            sanity -= 25;
-            stamina -= 10;
             String firstChoiceInput1OptionC = "\n There are no good hiding spots. Classrooms were all wide open and in shambles. You quickly turned into a narrow hallway and found a locker still intact. You cringed at the loud creaking, knowing whatever is following definately heard it. The tapping was growing louder, and you didn't have any other options.";
             System.out.println(firstChoiceInput1OptionC);
+            sanity -= 25;
+            stamina -= 10;
             System.out.println(" \nSanity: " + sanity + "%");
             System.out.println("Stamina: " + stamina);
         break;
