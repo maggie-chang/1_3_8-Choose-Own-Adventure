@@ -42,7 +42,9 @@ public class YourAdventure
                     stamina -= 35;
                     System.out.println(" \nSanity: " + sanity + "%");
                     System.out.println("Stamina: " + stamina);
+                    String thirdText = "The sound now seems to be closing in on you. Through your heart palpitations, you heard two words: 'hollow purple.'";
                     String thirdChoice = "\n (1) Continue running. \n (2) Stop and catch your breath.";
+                    System.out.println(thirdText);
                     System.out.println(thirdChoice);
                     System.out.println("Your choice: ");
                     String thirdChoiceInput3 = scanner.nextLine();
@@ -56,12 +58,15 @@ public class YourAdventure
                         System.out.println("Bad Ending (#3)");
                     }
                     else if (thirdChoiceInput3.equals("2")) {
-                        String thirdChoiceInput3OptionB = "You stop by a classroom, and decide to hide in there for a bit.";
+                        String thirdChoiceInput3OptionB = "You sharply turned into a classroom, and decide to hide in there for a bit.";
                         System.out.println(thirdChoiceInput3OptionB);
                         sanity -= 10;
                         stamina += 40;
                         System.out.println(" \nSanity: " + sanity + "%");
                         System.out.println("Stamina: " + stamina);
+                        
+                        String fourthText = "Still water";
+                        System.out.println(fourthText);
                     }
                 break;
                 }
@@ -89,7 +94,7 @@ public class YourAdventure
             String firstChoiceInput1OptionC = "\n There are no good hiding spots. Classrooms were all wide open and in shambles. You quickly turned into a narrow hallway and found a locker still intact. You cringed at the loud creaking, knowing whatever is following definately heard it. The tapping was growing louder, and you didn't have any other options.";
             System.out.println(firstChoiceInput1OptionC);
             sanity -= 25;
-            stamina -= 10;
+            stamina -= 18;
             System.out.println(" \nSanity: " + sanity + "%");
             System.out.println("Stamina: " + stamina);
         break;
